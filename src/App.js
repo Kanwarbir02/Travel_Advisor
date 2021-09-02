@@ -10,11 +10,11 @@ const App = () =>  {
       <CssBaseline />
         <Header />
       <Grid container spacing={4} style={{width: "100%"}}>
-        <Grid item xs={12} md={4} style={{background:"blue"}}>
+        <Grid item xs={12} md={4} style={{}}>
             <List />
         </Grid>
 
-        <Grid item xs={12} md={8} style={{background:"yellow"}}>
+        <Grid item xs={12} md={8} style={{}}>
           <Map />
         </Grid>
 
