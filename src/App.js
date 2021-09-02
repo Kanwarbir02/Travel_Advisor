@@ -1,10 +1,16 @@
-
+import Header from "./components/Header/Header";
+import List from "./components/List/List";
+import Map from "./components/Maps/Map";
 
 const App = () =>  {
   return (
     <div>
-      <h1>App</h1>
+      <Header />
+      <List />
+      <Map />
     </div>
+    
+
   );
 }
 
