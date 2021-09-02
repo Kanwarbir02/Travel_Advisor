@@ -1,11 +1,11 @@
 import axios from "axios";
-import { options } from "./apiDetails";
+import { Options } from "./apiDetails";
 
-const URl = "https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary"
+const URL = "https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary";
 
-const options = options;
+const options = Options;
 
-const getPlacesData = async () => {
+export const getPlacesData = async () => {
     try {
         const {data: {data}} = await axios.get(URL, options);
 

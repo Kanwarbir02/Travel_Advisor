@@ -1,4 +1,4 @@
-export const options = {
+export const Options = {
     method: 'GET',
     url: 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary',
     params: {
