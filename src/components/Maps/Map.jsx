@@ -5,12 +5,13 @@ import LocationOnOutlinedIcon from "@material-ui/icons";
 import { key } from "./apiKey";
 import useStyles from "./styles"
 
-const Map = () => {
+const Map = ({setCoordinates, setBounds, coordinates}) => {
 
     const styles = useStyles();
 
     //For the instances on a mobile 
     // const isMobile = useMediaQuery("(min-width: 600px)")
+
 
     const coordinates = {lat: 0, lng: 0}
 

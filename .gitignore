@@ -8,8 +8,6 @@
 # testing
 /coverage
 
-/api/apiDetails.js
-/components/Maps/apiKey.js
 
 # production
 /build
