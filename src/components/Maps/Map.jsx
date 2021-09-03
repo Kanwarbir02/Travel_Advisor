@@ -13,7 +13,7 @@ const Map = ({setCoordinates, setBounds, coordinates}) => {
     // const isMobile = useMediaQuery("(min-width: 600px)")
 
 
-    const coordinates = {lat: 0, lng: 0}
+    
 
     return ( 
         <div className={styles.mapContainer}>
