@@ -12,6 +12,7 @@ const Map = ({setCoordinates, setBounds, coordinates}) => {
     //For the instances on a mobile 
     // const isMobile = useMediaQuery("(min-width: 600px)")
 
+    // coordinates = {lat:0, lng: 0}
 
     
 
@@ -24,7 +25,13 @@ const Map = ({setCoordinates, setBounds, coordinates}) => {
                 defaultZoom={1} 
                 margin={[50,50,50,50]} 
                 options={""} 
+                onChange={(e) => {
+                    setCoordinates({ lat: e.center.lat, lng: e.center.lng})
+                    setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw })
+                }}
                   >
+
+                  {console.log(coordinates)}
 
             </GoogleMapReact>
         </div>
