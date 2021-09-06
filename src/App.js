@@ -13,6 +13,14 @@ const App = () =>  {
   const [coordinates, setCoordinates] = useState({lat: 0, lng: 0});
   const [bounds, setBounds] = useState(null);
 
+//Setting up user's location as the default location
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
+      setCoordinates({lat: latitude, lng: longitude});
+    })
+  }, []);
+
+
   useEffect((coordinates, bounds) => {
     getPlacesData()
       .then((data) => {
