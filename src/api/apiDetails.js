@@ -9,6 +9,6 @@ export const Options = {
   },
   headers: {
     'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
-    'x-rapidapi-key': '8cb5d27519msha697911e80d08b5p106054jsncc8ca630eaab'
+    'x-rapidapi-key': process.env.REACT_MAP_RAPID_API_KEY
   }
 };
