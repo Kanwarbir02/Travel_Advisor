@@ -1,24 +1,26 @@
 import { Typography, FormControl, InputLabel, Select, MenuItem, Grid } from "@material-ui/core";
 import { useState } from "react";
 import useStyles from "./styles"
-import PlaceDetails from "../PlaceDetails/PlaceDetails"
-const List = () => {
+import PlaceDetails from "../PlaceDetails/PlaceDetails";
+
+
+const List = ({places}) => {
 
     const [type, setType] = useState("restaurants");
     const [rating, setRating] = useState(0);
 
     const styles = useStyles();
 
-    const samplePlaces = [
-        {name: "Brew Estate"},
-        {name: "BBQ Nat"},
-        {name: "Brew Estate"},
-        {name: "BBQ Nat"},
-        {name: "Brew Estate"},
-        {name: "BBQ Nat"},
-        {name: "Brew Estate"},
-        {name: "BBQ Nat"}
-    ]
+    // const samplePlaces = [
+    //     {name: "Brew Estate"},
+    //     {name: "BBQ Nat"},
+    //     {name: "Brew Estate"},
+    //     {name: "BBQ Nat"},
+    //     {name: "Brew Estate"},
+    //     {name: "BBQ Nat"},
+    //     {name: "Brew Estate"},
+    //     {name: "BBQ Nat"}
+    // ]
 
     return ( 
         <div className={styles.container}>
@@ -50,7 +52,7 @@ const List = () => {
                 </FormControl>
 
             <Grid container className={styles.list}>
-                {samplePlaces?.map((place, i) => (
+                {places?.map((place, i) => (
                     <Grid item key= {i} xs={12}>
                         <PlaceDetails place = {place} />
                     </Grid>

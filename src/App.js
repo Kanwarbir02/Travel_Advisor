@@ -11,7 +11,7 @@ const App = () =>  {
 
   const [places, setPlaces] = useState([]); 
   const [coordinates, setCoordinates] = useState({lat: 0, lng: 0});
-  const [bounds, setBounds] = useState(null);
+  const [bounds, setBounds] = useState({ne: 0, sw: 0});
 
 //Setting up user's location as the default location
   useEffect(() => {
@@ -21,11 +21,14 @@ const App = () =>  {
   }, []);
 
 
-  useEffect((coordinates, bounds) => {
-    getPlacesData()
+  useEffect(() => {
+
+    getPlacesData(bounds.sw, bounds.ne)
       .then((data) => {
+
         console.log(data);
         setPlaces(data);
+      
       })
   }, [coordinates, bounds])
 
@@ -35,7 +38,7 @@ const App = () =>  {
         <Header />
       <Grid container spacing={4} style={{width: "100%"}}>
         <Grid item xs={12} md={4} style={{}}>
-            <List />
+            <List places={places} />
         </Grid>
 
         <Grid item xs={12} md={8} style={{}}>
