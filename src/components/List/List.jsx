@@ -11,16 +11,7 @@ const List = ({places}) => {
 
     const styles = useStyles();
 
-    // const samplePlaces = [
-    //     {name: "Brew Estate"},
-    //     {name: "BBQ Nat"},
-    //     {name: "Brew Estate"},
-    //     {name: "BBQ Nat"},
-    //     {name: "Brew Estate"},
-    //     {name: "BBQ Nat"},
-    //     {name: "Brew Estate"},
-    //     {name: "BBQ Nat"}
-    // ]
+   
 
     return ( 
         <div className={styles.container}>
